@@ -26,11 +26,11 @@
         --lightcolor:rgb(11, 11, 11);
         --tcolor:white;
         --bordercolor:white;
-        background: url(images/login_dark_background.png);
+        background: url(./assets/images/login_dark_background.png);
       }
       body {
         background-size: cover;
-        background: url(images/login_back.jpg);
+        background: url(./assets/images/login_back.jpg);
         color: var(--tcolor);
       }
       div.main {
@@ -141,7 +141,7 @@
   <body>
     <nav>
       <div>
-        <button onclick="changeimage()" onmouseleave="restoreimage()"><img src="images/moon.png" alt="moon"  height="35px" width="35px" id="icon"></button>
+        <button onclick="changeimage()" onmouseleave="restoreimage()"><img src="./assets/images/moon.png" alt="moon"  height="35px" width="35px" id="icon"></button>
       </div>
     </nav>
     <div class="main">
@@ -214,21 +214,22 @@
     icon.onclick = function(){
       document.body.classList.toggle("dark-theme");
       if(document.body.classList.contains("dark-theme")){
-        icon.src =" images/sun.png";
+        icon.src =" ./assets/images/sun.png";
       }else{
-        icon.src = "images/moon.png";
+        icon.src = "./assets/images/moon.png";
       }
     }
   </script>
   <script>
     function changeimage()
         {
-            document.getElementsByTagName("body").src = 'FEE project\new\images\login background.png'
+            document.getElementsByTagName("body").src = './assets/images/login background.png'
         }
         function restoreimage()
         {
-            document.getElementsByTagName("body").src = 'FEE project\new\images\loogin dark background.png'
+            document.getElementsByTagName("body").src = './assets/images/loogin dark background.png'
         }
   </script>
   </body>
 </html>
+
