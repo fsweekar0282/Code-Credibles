@@ -320,7 +320,7 @@ body{
   margin-top: 3rem;
 }
 .intro .container .instructor {
-  background-image: url("images/instructer.png");
+  background-image: url("./assets/images/instructer.png");
   background-repeat: no-repeat;
   background-size: cover;
   height: 280px;
@@ -345,7 +345,7 @@ body{
   
 }
 .intro .container .student {
-  background-image: url("images/student\ .png");
+  background-image: url("./assets/images/student\ .png");
   background-repeat: no-repeat;
   background-size: cover;
   height: 280px;
@@ -950,4 +950,5 @@ footer .copyright p {
       align-items: center;
       gap: 1rem;
   }
+
 }
