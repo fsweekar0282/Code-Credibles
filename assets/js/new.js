@@ -9,9 +9,9 @@ var icon = document.getElementById('icon');
 icon.onclick = function(){
     document.body.classList.toggle("dark-theme");
     if(document.body.classList.contains("dark-theme")){
-    icon.src =" images/sun.png";
+    icon.src =" ./assets/images/sun.png";
     }else{
-    icon.src = "images/moon.png";
+    icon.src = "./assets/images/moon.png";
     }
 }
 function myFunction() {
@@ -25,4 +25,5 @@ let nav_list = document.querySelector(".nav-list");
     hamburgerbtn.addEventListener("click", () => {
     hamburgerbtn.classList.toggle("active");
     nav_list.classList.toggle("active");
+
     });
