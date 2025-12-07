@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Credibles-sign ups</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@500&family=Inconsolata:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      :root {
+        --lightcolor:rgba(255, 255, 255, 0.6);
+        --bordercolor:black;
+        --tcolor:black;
+      }
+      .dark-theme{
+        --lightcolor:rgb(11, 11, 11);
+        --tcolor:white;
+        --bordercolor:white;
+        background: url(images/login_dark_background.png);
+      }
+      body {
+        background-size: cover;
+        background: url(images/login_back.jpg);
+        color: var(--tcolor);
+      }
+      div.main {
+        width: 400px;
+        margin: 100px auto 0px auto;
+        margin-bottom: 60px;
+      }
+      h2 {
+        text-align: center;
+        padding-right: 20px;
+        font-family:monospace;
+        text-transform: uppercase;
+        font-weight: 1600;
+      }
+      div.register {
+        background-color: var(--lightcolor);
+        width: 100%;
+        font-size: 18px;
+        border-radius: 10px;
+        border: 15px 15px 13px ;
+        border-color: var(--bordercolor);
+        box-shadow: 2px 2px 15px var(--bordercolor);
+        /* animation: shadow 9s infinite; */
+        backdrop-filter: blur(20px);
+        font-family: Inconsolata;
+        background: transparent;
+      }
+      @keyframes shadow {
+        0%{
+            box-shadow: 5px 5px 30px #fff;
+        }
+        50%{
+            box-shadow: 0px 0px 0px #000;
+        }
+        100%{
+            box-shadow: 5px 5px 30px #fff;
+        }
+      }
+      form#register {
+        margin: 50px;
+      }
+      label {
+        font-family: sans-serif;
+        font-size: 18px;
+        font-style: italic;
+      }
+      input#name {
+        width: 300px;
+        border-radius: 1px solid #fff;
+        border-radius: 3px;
+        outline: 0;
+        padding: 7px;
+        background-color: #fff;
+        box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.3);
+        transition: all ease 0.4s;
+      }
+      input#submit {
+        width: 200px;
+        padding: 7px;
+        font-size: 1em;
+        font-weight: 600;
+        border: none;
+        background-color: rgba(250, 100, 0, 0.8);
+        cursor: pointer;
+        box-shadow: 1px 1px 5px;
+        transition: all ease 0.4s;
+      }
+      #submit:active {
+        scale: 0.9;
+      }
+      #name:active {
+        scale: 0.9;
+      }
+      label,
+      h2 {
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+      }
+      .checkbox {
+        display:flex;
+        cursor: pointer;
+        justify-content: space-evenly;
+        font-size: larger;
+      }
+      #lang {
+        display: flex;
+        justify-content: space-evenly;
+        cursor: pointer;
+        font-size: larger;
+      }
+      form a {
+        text-decoration: none;
+      }
+      nav div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      nav button{
+        border:2px 2px 2px;
+        border-color: var(--bordercolor);
+        border-radius: 50%;
+        cursor: pointer;
+        background-color: var(--lightcolor);
+        padding: 2px 2px 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div>
+        <button onclick="changeimage()" onmouseleave="restoreimage()"><img src="images/moon.png" alt="moon"  height="35px" width="35px" id="icon"></button>
+      </div>
+    </nav>
+    <div class="main">
+      <div class="register">
+        <h2 class="animate__fadeInDownBig">Register Here</h2>
+        <form method="get" id="register" autocomplete="off">
+          <label for="name">First Name: </label>
+          <br />
+          <input
+            id="name"
+            type="text"
+            placeholder="Write your first name...."
+          />
+          <br /><br />
+          <label for="name">Last Name: </label>
+          <br />
+          <input id="name" type="text" placeholder="Write your last name...." />
+          <br /><br />
+          <label for="email">Email: </label>
+          <br />
+          <input id="name" type="text" placeholder="your email " />
+          <br /><br />
+          <label for="" type="check">Your Age:</label>
+          <br />
+          <input
+            type="number"
+            name="age"
+            id="name"
+            placeholder="How old are you?"
+            pattern="{10-80}"
+          />
+          <br /><br />
+          <label for="gender">Gender: </label>
+          <br /><br />
+          <div class="checkbox">
+            <br />
+            <input type="radio" name="gender" />
+            <option value="gender">Male</option>
+            <input type="radio" name="gender" />
+            <option value="gender">Female</option>
+            <input type="radio" name="gender" />
+            <option value="gender">Others</option>
+          </div>
+          <br /><br />
+          <label for="language">Language: </label>
+          <br /><br />
+          <div id="lang">
+            <br />
+            <input type="radio" name="language" />
+            <option value="language">English</option>
+            <input type="radio" name="language" />
+            <option value="language">Hindi</option>
+            <input type="radio" name="language" />
+            <option value="language">French</option>
+          </div>
+          <br /><br /><div id="myDIV">
+          <button onclick="myFunction()"><input type="submit" id="submit" href="" /></button><br />
+          <br><a href="login_page.html">Already Have an account?</a>
+        </div>
+        </form>
+      </div>
+    </div>
+    <script>
+      function myFunction() {
+  alert("you are now a member of our code credibles family");
+    }
+  </script>
+  <script>
+    var icon = document.getElementById('icon');
+    icon.onclick = function(){
+      document.body.classList.toggle("dark-theme");
+      if(document.body.classList.contains("dark-theme")){
+        icon.src =" images/sun.png";
+      }else{
+        icon.src = "images/moon.png";
+      }
+    }
+  </script>
+  <script>
+    function changeimage()
+        {
+            document.getElementsByTagName("body").src = 'FEE project\new\images\login background.png'
+        }
+        function restoreimage()
+        {
+            document.getElementsByTagName("body").src = 'FEE project\new\images\loogin dark background.png'
+        }
+  </script>
+  </body>
+</html>
