@@ -163,16 +163,16 @@ body{
     <section class="hero">
         <div class="heading">
             <h1>About Us</h1>
-            <button onclick=""><img src="images/moon.png" alt=""  height="35px" width="35px" id="icon"></button>
+            <button onclick=""><img src="./assets/images/moon.png" alt=""  height="35px" width="35px" id="icon"></button>
         </div>
         <div class="container">
             <div class="hero-content">
                 <h2>Welcome to Code Credibles</h2>
                 <p>Our online learning platform aims to make coding easier for students.It works towards helping teachers and students. It includes all kinds of different courses, whether it be web development or  learning programing languages. Code Credibles has a lot to offer.</p>
-                    <button class="cta-button"><a href="new.html">Learn More</a></button>
+                    <button class="cta-button"><a href="index.html">Learn More</a></button>
             </div>
             <div class="hero-image">
-                <img src="images/about_us_back.jpg">
+                <img src="./assets/images/about_us_back.jpg">
             </div>
         </div>
     </section>
@@ -181,11 +181,12 @@ body{
     icon.onclick = function(){
       document.body.classList.toggle("dark-theme");
       if(document.body.classList.contains("dark-theme")){
-        icon.src =" images/sun.png";
+        icon.src =" ./assets/images/sun.png";
       }else{
-        icon.src = "images/moon.png";
+        icon.src = "./assets/images/moon.png";
       }
     }
     </script>
 </body>
+
 </html>
